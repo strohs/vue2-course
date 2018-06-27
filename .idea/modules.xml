@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/2-dom-interaction/2-dom-interaction.iml" filepath="$PROJECT_DIR$/2-dom-interaction/2-dom-interaction.iml" />
+      <module fileurl="file://$PROJECT_DIR$/3-conditionals-lists/3-conditionals-lists.iml" filepath="$PROJECT_DIR$/3-conditionals-lists/3-conditionals-lists.iml" />
+      <module fileurl="file://$PROJECT_DIR$/4-monster-slayer/4-monster-slayer.iml" filepath="$PROJECT_DIR$/4-monster-slayer/4-monster-slayer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/5-understanding-vuejs-instance/5-understanding-vuejs-instance.iml" filepath="$PROJECT_DIR$/5-understanding-vuejs-instance/5-understanding-vuejs-instance.iml" />
+      <module fileurl="file://$PROJECT_DIR$/6-vue-project-setup/6-vue-project-setup.iml" filepath="$PROJECT_DIR$/6-vue-project-setup/6-vue-project-setup.iml" />
+      <module fileurl="file://$PROJECT_DIR$/7-components/7-components.iml" filepath="$PROJECT_DIR$/7-components/7-components.iml" />
+      <module fileurl="file://$PROJECT_DIR$/7-components-assignment/7-components-assignment.iml" filepath="$PROJECT_DIR$/7-components-assignment/7-components-assignment.iml" />
+      <module fileurl="file://$PROJECT_DIR$/8-component-communication/8-component-communication.iml" filepath="$PROJECT_DIR$/8-component-communication/8-component-communication.iml" />
+      <module fileurl="file://$PROJECT_DIR$/8-component-communication-assignment/8-component-communication-assignment.iml" filepath="$PROJECT_DIR$/8-component-communication-assignment/8-component-communication-assignment.iml" />
+      <module fileurl="file://$PROJECT_DIR$/vue2-course.iml" filepath="$PROJECT_DIR$/vue2-course.iml" />
+    </modules>
+  </component>
+</project>

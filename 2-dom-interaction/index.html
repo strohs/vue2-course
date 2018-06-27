@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:v-on="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Vue Course - DOM Interactions</title>
+
+    <link rel="stylesheet" href="mystyle.css">
+</head>
+<body>
+
+    <!-- event handling -->
+    <div id="app">
+        <button v-on:click="increase(2, $event)">Click me</button>
+        <p>{{ counter }}</p>
+        <p v-on:mousemove="updateCoordinates">
+            Coordinates: {{ x }} / {{ y }}
+            <!-- mousemove.stop is an event modifier and will stop event propagation -->
+            - <span v-on:mousemove.stop="">DEAD ZONE</span>
+        </p>
+        <input type="text" v-on:keyup.enter="alertMe">
+    </div>
+
+    <!-- 2-way data binding -->
+    <div id="app2">
+        <input type="text" v-model="name">
+        <p> {{ name }}</p>
+    </div>
+
+    <!-- reacting to changes with computed properties -->
+    <div id="app3">
+        <button v-on:click="counter++">Increase</button>
+        <button v-on:click="counter--">Decrease</button>
+        <button @click="secondCounter++">Increase Second</button>
+        <p>Counter: {{ counter }} | {{ secondCounter }}</p>
+        <p>Result: {{ result() }} | {{ output }}</p>
+    </div>
+
+    <!-- dynamic styling with CSS classes -->
+    <div id="app4">
+        <div class="demo" @click="attachRed = !attachRed" :class="divClasses"></div>
+        <div class="demo" :class="color"></div>
+        <!-- attaching multiple color classes -->
+        <div class="demo" :class="[color, {red: attachRed}]"></div>
+        <hr>
+        <input type="text" v-model="color">
+    </div>
+
+    <!-- setting styles dynamically without css classes -->
+    <div id="app5">
+        <div class="demo" :style="{'background-color': color}" ></div>
+        <!-- :Style option2 using camel case for the CSS property name -->
+        <div class="demo" :style="{backgroundColor: color}" ></div>
+        <!-- using vue :style with computed object -->
+        <div class="demo" :style="myStyle"></div>
+        <!-- attaching multiple styles with arrays -->
+        <div class="demo" :style="[myStyle, {height: width + 'px'}]"></div>
+        <hr>
+        <input type="text" v-model="color">
+        <input type="text" v-model="width">
+    </div>
+
+<!--
+VUE Shorthands
+v-on:click=                 @click=
+v-bind:<some-attribute>     :<some-attribute>
+-->
+
+<script src="vue.js"></script>
+<script src="myvue.js"></script>
+</body>
+</html>

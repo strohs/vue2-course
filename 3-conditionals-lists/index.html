@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <title>3 Conditional Rendering and Lists</title>
+</head>
+<body>
+
+    <!-- Conditional rendering with v-if -->
+    <div id="app">
+        <p v-if="show">You can see me! <span>Hello!</span></p>
+        <!-- refers to the nearest v-if condition above it -->
+        <!-- there is also v-else-if which can be chained multiple times-->
+        <p v-else>else now you see me</p>
+        <!-- template is used to group multiple elements together that you want to show or hide -->
+        <!-- template itself is not rendered by the DOM, but its child elements are -->
+        <template v-if="show">
+            <p>Inside a template</p>
+            <h1>Template heading 1</h1>
+        </template>
+        <!-- v-show will hide an element (set style=display:none) whereas v-if will actually remove the element from the DOM-->
+        <p v-show="show">Do you also see me?</p>
+        <button @click="show = !show">Switch</button>
+    </div>
+    <hr>
+    <!-- Rendering lists with v-for -->
+    <div id="app2">
+        <ul>
+            <!-- key should ideally be a unique id that identifies each ingredient -->
+            <li v-for="(ingredient,index) in ingredients" :key="index">{{ ingredient }} ({{ index }})</li>
+        </ul>
+        <button @click="ingredients.push('spices')">Add New</button>
+        <hr>
+        <!-- looping thru objects -->
+        <ul>
+            <li v-for="person in persons">
+                <!-- the variable name 'value','key','index' is arbitrary, it will iterate thru all values in persons -->
+                <div v-for="(value, key, index) in person">
+                    {{ key }} : {{ value }} ({{ index }})
+                </div>
+            </li>
+        </ul>
+        <hr>
+        <!-- looping thru a list of numbers, will produce 1 to 10 inclusive -->
+        <span v-for="n in 10">{{ n }}</span>
+        <hr>
+        <template v-for="(ingredient,index) in ingredients">
+            <h1>{{ ingredient }}</h1>
+            <p>{{ index }}</p>
+        </template>
+    </div>
+
+<script src="vue.js"></script>
+<script src="myvue.js"></script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en" xmlns:v-on="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Understanding VueJS</title>
+</head>
+<body>
+
+
+<div id="app1">
+    <h1 ref="heading">{{ title }}</h1>
+    <!-- ref attribute used to reference HTML elements from inside jaavascript code -->
+    <button v-on:click="show" ref="myButton">Show Paragraph</button>
+    <p v-if="showParagraph">This is not always visible</p>
+</div>
+
+<div id="app2">
+    <h1 ref="heading">{{ title }}</h1>
+    <!-- accessing one vue instance from another vue instance -->
+    <button @click="onChange">Change something in Vue1</button>
+
+    <!-- would be replaced by our vue component name 'hello' -->
+    <!--<hello></hello>-->
+    <!--<hello></hello>-->
+</div>
+
+<div id="app3">
+
+</div>
+
+
+<script src="vue.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
+
+
