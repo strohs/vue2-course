@@ -35,7 +35,7 @@
         appHeader: Header
       },
       methods: {
-        addNewQuote( quote, p1 ) {
+        addNewQuote( quote ) {
           if ( this.quotes.length >= this.maxQuotes ) {
             return alert('Please delete a quote first!');
           }
