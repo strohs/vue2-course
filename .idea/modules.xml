@@ -11,6 +11,7 @@
       <module fileurl="file://$PROJECT_DIR$/7-components-assignment/7-components-assignment.iml" filepath="$PROJECT_DIR$/7-components-assignment/7-components-assignment.iml" />
       <module fileurl="file://$PROJECT_DIR$/8-component-communication/8-component-communication.iml" filepath="$PROJECT_DIR$/8-component-communication/8-component-communication.iml" />
       <module fileurl="file://$PROJECT_DIR$/8-component-communication-assignment/8-component-communication-assignment.iml" filepath="$PROJECT_DIR$/8-component-communication-assignment/8-component-communication-assignment.iml" />
+      <module fileurl="file://$PROJECT_DIR$/9-components-advanced/9-components-advanced.iml" filepath="$PROJECT_DIR$/9-components-advanced/9-components-advanced.iml" />
       <module fileurl="file://$PROJECT_DIR$/vue2-course.iml" filepath="$PROJECT_DIR$/vue2-course.iml" />
     </modules>
   </component>
