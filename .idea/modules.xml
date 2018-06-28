@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/10-quotes-project/10-quotes-project.iml" filepath="$PROJECT_DIR$/10-quotes-project/10-quotes-project.iml" />
       <module fileurl="file://$PROJECT_DIR$/2-dom-interaction/2-dom-interaction.iml" filepath="$PROJECT_DIR$/2-dom-interaction/2-dom-interaction.iml" />
       <module fileurl="file://$PROJECT_DIR$/3-conditionals-lists/3-conditionals-lists.iml" filepath="$PROJECT_DIR$/3-conditionals-lists/3-conditionals-lists.iml" />
       <module fileurl="file://$PROJECT_DIR$/4-monster-slayer/4-monster-slayer.iml" filepath="$PROJECT_DIR$/4-monster-slayer/4-monster-slayer.iml" />
