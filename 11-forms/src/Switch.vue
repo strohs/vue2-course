@@ -1,5 +1,5 @@
 <template>
-  <!-- This is a custom form component -->
+  <!-- This is a custom form control -->
   <div>
     <div id="on" @click="switched(true)" :class="{active: value}">On</div>
     <div id="off" @click="switched(false)" :class="{active: !value}">Off</div>
@@ -9,11 +9,11 @@
 <script>
     export default {
         name: "Switch",
-      //props has to be 'value' when creating a custom control
+      //props has to be 'value' when creating a custom control that you want to use with v-model
       props: ['value'],
       methods: {
           switched(isOn) {
-            //emit name has to be 'input' when using a custom control
+            //emit name has to be 'input' when using a custom control that you want to use with v-model
             this.$emit('input', isOn)
           }
       }
