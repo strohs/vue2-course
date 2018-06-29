@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/11-forms/11-forms.iml" filepath="$PROJECT_DIR$/11-forms/11-forms.iml" />
       <module fileurl="file://$PROJECT_DIR$/vue2-course.iml" filepath="$PROJECT_DIR$/vue2-course.iml" />
     </modules>
   </component>
