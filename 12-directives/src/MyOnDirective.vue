@@ -5,12 +5,12 @@
     <div class="row">
       <div class="col-xs-12 col-sm-8 offset-sm-2 col-md-6 offset-md-3">
         <h1>Directives Assignment</h1>
-        <div v-my-on:click="funcToExec">
+        <div v-my-on:click="funcToExec('ploo')">
           <p>a sample paragraph</p>
         </div>
         <hr>
         <div>
-          <button @click="loggit('a sample message')">Log it</button>
+          <button @click="loggit">Log it</button>
         </div>
 
 
@@ -36,11 +36,13 @@
     },
     methods: {
       funcToExec(event) {
-        console.log(event);
+        console.log( event );
+        console.log( arguments )
         console.log('executing function with value: ');
       },
-      loggit(message) {
-        console.log( message );
+      loggit(event) {
+        console.log( event );
+
       }
 
     }
