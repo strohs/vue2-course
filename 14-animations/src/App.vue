@@ -31,7 +31,7 @@
           <!-- we are explicitly overriding Vue's default classes and specifying our third party library -->
           <!-- can also use v-show  to do animations -->
           <!-- appear attribute causes animation to trigger when page loads -->
-          <div class="alert alert-info" v-if="show">This is an info</div>
+          <div class="alert alert-info" v-if="show">This is a animated.css info</div>
         </transition>
         <transition :name="alertAnimation" mode="out-in">
           <!-- using v-show will not work if trying to transition with multiple elements, must use v-if -->
