@@ -8,13 +8,14 @@
 
 <script>
   import {mapGetters}  from 'vuex';
+
   export default {
     computed: {
       //spread operator needed here so we can add our own computed properties in addition to mapGetters
-      ...mapGetters([
-                   'doubleCounter',
-                   'stringCounter'
-                 ]),
+      ...mapGetters('counter',{
+        doubleCounter: 'doubleCounter',
+        stringCounter: 'stringCounter'
+      }),
       ourOwnComputedProperty() {
         //do some computed calculation
       }

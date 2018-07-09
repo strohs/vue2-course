@@ -10,7 +10,7 @@
 
   export default {
     methods: {
-      ...mapActions([
+      ...mapActions('counter',[
         'increment',
         'decrement'
       ]),

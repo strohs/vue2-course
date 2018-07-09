@@ -9,7 +9,8 @@
         <app-counter></app-counter>
         <app-another-counter></app-another-counter>
         <hr>
-
+        <input type="text" v-model="value">
+        <p>value: {{ value }}</p>
       </div>
     </div>
   </div>
@@ -27,6 +28,23 @@
       appAnotherCounter: AnotherCounter,
       appResult: Result,
       appAnotherResult: AnotherResult
+    },
+    computed: {
+      value: {
+        //using getters and setters to 2-way bind a value stored in Vuex state
+        get() {
+          return this.$store.getters.value;
+        },
+        //setters are rarely used to set state directly, but there could be cases when you need to do so
+        set(value) {
+          this.$store.dispatch('updateValue', value );
+        }
+      }
+    },
+    methods: {
+      updateValue(event) {
+        this.$store.dispatch('updateValue', event.target.value );
+      }
     }
   }
 </script>
