@@ -1,21 +1,20 @@
 <template>
-  <div class="container">
-    <div class="col">
-      <app-navbar></app-navbar>
+
+    <div class="container">
+            <app-header></app-header>
+            <router-view></router-view>
     </div>
 
-  </div>
 </template>
 
 <script>
-  import Navbar from './components/Navbar.vue';
+    import Header from './components/Header.vue';
 
-  export default {
-
-    components: {
-      appNavbar: Navbar
+    export default {
+        components: {
+            appHeader: Header
+        }
     }
-  }
 </script>
 
 <style>
