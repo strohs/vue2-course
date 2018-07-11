@@ -14,14 +14,14 @@
                 </b-navbar-nav>
 
                 <b-navbar-nav class="ml-auto">
-                    <b-nav-item href="#">End Day</b-nav-item>
+                    <b-nav-item href="#" @click="endDay">End Day</b-nav-item>
 
                     <b-nav-item-dropdown text="Save & Load" right>
-                        <b-dropdown-item href="#">Save Data</b-dropdown-item>
-                        <b-dropdown-item href="#">Load Data</b-dropdown-item>
+                        <b-dropdown-item @click="saveData">Save Data</b-dropdown-item>
+                        <b-dropdown-item @click="loadData">Load Data</b-dropdown-item>
                     </b-nav-item-dropdown>
 
-                    <b-nav-item href="#">Funds ${{funds}}</b-nav-item>
+                    <b-nav-item href="#">Funds: {{funds | currency }}</b-nav-item>
                 </b-navbar-nav>
             </b-collapse>
 
@@ -31,13 +31,32 @@
 </template>
 
 <script>
-
+    import axios from '../axios-auth.js';
+    
     export default {
         name: "Header",
-        data() {
-            return {
-                //TODO convert to Vuex state
-                funds: 9999.99
+        computed: {
+            funds() {
+                return this.$store.getters['portfolio/funds'];
+            }
+        },
+        methods: {
+            endDay() {
+                this.$store.dispatch('stocks/randomizeStocks');
+            },
+            saveData() {
+                const data = {
+                    funds: this.$store.getters['portfolio/funds'],
+                    stockPortfolio: this.$store.getters['portfolio/stockPortfolio'],
+                    stocks: this.$store.getters['stocks/stocks']
+                };
+                console.log('saving application data:', data);
+                axios.put('/data.json', data)
+                    .then( res => console.log(res) )
+                    .catch( error => console.log(error) )
+            },
+            loadData() {
+                this.$store.dispatch('loadData');
             }
         }
     }

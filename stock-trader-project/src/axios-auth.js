@@ -6,7 +6,7 @@ import axios from 'axios';
  */
 
 const instance = axios.create({
-    baseURL: 'https://vuejs-http-c8a12.firebaseio.com'
+    baseURL: 'https://vue-stock-application.firebaseio.com/'
 });
 
 //instance.defaults.headers.common['SOMETHING'] = 'something';
