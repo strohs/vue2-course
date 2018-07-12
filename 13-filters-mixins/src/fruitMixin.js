@@ -18,7 +18,7 @@ export const fruitMixin = {
   //computed properties may be a better alternative to using filters, may perform better too
   computed: {
     filteredFruits() {
-      return this.fruits.filter(value => {
+      return this.fruits.filter( value => {
         return value.match( this.filterText );
       })
     }
