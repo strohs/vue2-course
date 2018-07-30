@@ -2,7 +2,8 @@ import Vue from 'vue'
 import App from './App.vue'
 
 //global filter
-Vue.filter('capitalize', function (value) {
+Vue.f
+ilter('capitalize', function (value) {
   return value[0].toUpperCase() + value.substring(1);
 });
 
